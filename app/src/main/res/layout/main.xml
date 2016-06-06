@@ -94,7 +94,8 @@
     <Button
         android:text="Continuer"
         android:id="@+id/btnEvaluate"
-        style="@style/buttonSubmit" />
+        style="@style/buttonSubmit"
+        android:onClick="btnEvaluate_Click"/>
 
 
 </LinearLayout>
