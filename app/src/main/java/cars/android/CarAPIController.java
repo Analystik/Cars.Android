@@ -14,10 +14,6 @@ import cars.android.Models.Province;
  * Created by Analystik on 2016-06-02.
  */
 public class CarAPIController {
-
-   /* private Profile profile;
-    private FinancialEvaluation financialEvaluation;*/
-
     private static CarAPIController instance = null;
 
     protected CarAPIController() {}
