@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="financialEvaluation" type="cars.android.Models.FinancialEvaluation"/>
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/parent"
+        android:id="@+id/rootContainer">
+
+        <Button
+            android:text="Retour"
+            android:id="@+id/btn_submit2"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:onClick="goToMainView"/>
+
+        <LinearLayout
+            android:id="@+id/rlv1"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@drawable/rectangle"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:layout_marginTop="40dp"
+            style="@style/parent">
+
+            <TextView
+                android:text= "@string/title"
+                android:id="@+id/textView"
+                style="@style/txtBoxGreen"
+                android:textSize="22dp" />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="270dp"
+                android:layout_height="30dp"
+                android:id="@+id/textView1"
+                style="@style/resulTxtbox"
+                android:text= '@{@string/spend +" "+ String.format("%,.0f",financialEvaluation.GasTotalExpensesIn8Years)+"$ "+ @string/gas}'
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="270dp"
+                android:layout_height="45dp"
+                android:id="@+id/textView2"
+                style="@style/resulTxtbox"
+                android:text='@{@string/spend +" "+String.format("%,.0f",financialEvaluation.ElectricityConsumptionIn8Years)+"$ "+ @string/elec}'
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:id="@+id/textView3"
+                style="@style/resulTxtbox"
+                android:text='@{@string/spent +" "+String.format("%,.0f",financialEvaluation.DeltaPrice)+"$ "+ @string/buyElec}'
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="270dp"
+                android:layout_height="80dp"
+                android:id="@+id/textView4"
+                style="@style/resulTxtbox"
+                android:text='@{@string/replaceBattery +" "+String.format("%,.0f",financialEvaluation.BatteryExpenses)+"$."}'
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rlv2"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rectangle"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="350dp">
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/pomp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp" />
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="5dp"
+                    style="@style/resulTxtbox"
+                    android:id="@+id/textView5"
+                    android:text='@{String.format("%,.1f",financialEvaluation.GasTotalExpensesPer100km)+"$ 100 km"}' />
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:textAlignment="center"
+                    style="@style/resulTxtbox"
+                    android:id="@+id/textView6"
+                    android:text='@{String.format("%,.0f",financialEvaluation.GasTotalExpensesIn8Years)+"$ /"+String.format("%,.0f",financialEvaluation.MileageIn8Years)+"km"}'/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="48dp"
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/plug"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="11dp"
+                    android:minHeight="60dp"
+                    android:maxHeight="60dp"
+                    />
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:textAlignment="center"
+                    style="@style/resulTxtbox"
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/textView7"
+                    android:text='@{String.format("%,.1f",financialEvaluation.ElectricityTotalExpensesPer100km)+"$ 100 km"}'
+                    />
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:textAlignment="center"
+                    style="@style/resulTxtbox"
+                    android:id="@+id/textView8"
+                    android:text='@{String.format("%,.0f",financialEvaluation.ElectricityTotalExpensesIn8Years)+"$ /"+String.format("%,.0f",financialEvaluation.MileageIn8Years)+"km"}'
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

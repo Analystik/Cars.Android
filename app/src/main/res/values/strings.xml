@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="title">Propriétaire plus de 8 ans</string>
+    <string name="spend">Vous allez dépenser </string>
+    <string name="spent">Vous aurez dépensé  </string>
+    <string name="gas">en essence.</string>
+    <string name="elec">en électricité.</string>
+    <string name="buyElec">de plus en achetant une voiture électrique.</string>
+    <string name="replaceBattery">Le coût estimé pour le remplacement de la batterie est :</string>
+</resources>

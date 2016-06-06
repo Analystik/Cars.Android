@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parent"
+    android:id="@+id/rootContainer">
+
+    <TextView
+        style="@style/title"
+        android:text="Essence contre Électricité"
+        android:id="@+id/title" />
+    <View
+        style="@style/line"
+        android:id="@+id/line1"/>
+
+    <TextView
+        android:text="La marque de la voiture actuelle"
+        android:id="@+id/QuestionMake"
+        style="@style/txtBox"/>
+    <ImageView
+        android:id="@+id/img_Car"
+        android:src="@drawable/car"
+        style="@style/img"/>
+    <Spinner
+        android:id="@+id/reponseMake"
+        style="@style/spinner" />
+
+
+
+    <View
+        style="@style/line"
+        android:id="@+id/line2" />
+    <TextView
+        style="@style/txtBox"
+        android:text="Le modèle"
+        android:id="@+id/questionModel"/>
+    <ImageView
+        android:id="@+id/img_model"
+        android:src="@drawable/model"
+        style="@style/img"/>
+    <Spinner
+        android:id="@+id/reponseModel"
+        style="@style/spinner" />
+
+
+    <View
+        style="@style/line"
+        android:id="@+id/line3" />
+
+    <TextView
+        android:text="L'annnée"
+        android:id="@+id/question3"
+        style="@style/txtBox" />
+    <ImageView
+        style="@style/img"
+        android:id="@+id/img_calendar"
+        android:src="@drawable/calendar" />
+    <Spinner
+        style="@style/spinner"
+        android:id="@+id/reponseCar" />
+
+    <View
+        style="@style/line"
+        android:id="@+id/line4" />
+    <TextView
+        android:text="Votre province"
+        style="@style/txtBox" />
+    <ImageView
+        style="@style/img"
+        android:id="@+id/img_pin"
+        android:src="@drawable/pin" />
+    <Spinner
+        android:id="@+id/reponseProvince"
+        style="@style/spinner" />
+
+    <View
+        style="@style/line"
+        android:id="@+id/line5" />
+    <TextView
+        android:text="Votre kilométrage"
+        android:id="@+id/question5"
+        style="@style/txtBox" />
+    <ImageView
+        style="@style/img"
+        android:id="@+id/img_road"
+        android:src="@drawable/road" />
+    <SeekBar
+        android:id="@+id/reponseKiloSK"
+        style="@style/seekBar" />
+
+    <TextView
+        style="@style/seekBarResult"
+        android:id="@+id/reponseKilo" />
+
+
+    <Button
+        android:text="Continuer"
+        android:id="@+id/btnEvaluate"
+        style="@style/buttonSubmit" />
+
+
+</LinearLayout>
